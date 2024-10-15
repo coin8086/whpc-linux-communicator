@@ -13,7 +13,9 @@ export SHLIB_CXXFLAGS="$SHLIB_CXXFLAGS -O0"
 set -x
 
 rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
-yum-config-manager --add-repo http://download.mono-project.com/repo/centos/
+yum update -y
+yum install yum-utils -y
+yum-config-manager --add-repo http://download.mono-project.com/repo/centos8/
 yum update -y
 yum install perl-IPC-Cmd kernel-devel mono-complete -y
 curl -o /usr/local/bin/nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe

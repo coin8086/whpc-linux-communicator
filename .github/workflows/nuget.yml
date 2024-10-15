@@ -25,5 +25,5 @@ jobs:
             -e PUBLISH_PACKAGE_PASSWORD=${{ secrets.AZURE_ARTIFACTS_PASSWORD }} \
             -v "$(pwd):/hpcpack-linux-agent" \
             -w "/hpcpack-linux-agent/nodemanager" \
-            ghcr.io/phusion/holy-build-box/hbb-64 \
+            phusion/holy-build-box:latest \
             bash build_and_get_artifact.sh
