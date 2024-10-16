@@ -4,7 +4,7 @@
 We offer an script to help build artifacts. You can build and get artifacts under `build` by running:
 
 ```bash
-docker run -t -i --rm   -v `pwd`/../:/hpcpack-linux-agent   ghcr.io/phusion/holy-build-box/hbb-64 bash /hpcpack-linux-agent/nodemanager/build_and_get_artifact.sh
+docker run -t -i --rm   -v `pwd`/../:/hpcpack-linux-agent   phusion/holy-build-box:latest bash /hpcpack-linux-agent/nodemanager/build_and_get_artifact.sh
 ```
 
 ## Conding Convention
